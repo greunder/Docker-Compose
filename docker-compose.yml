@@ -1,0 +1,23 @@
+version: "3"
+services:
+
+  
+  Dataset:
+    build: definition/
+    container_name: definition
+    command: python ./definition.py
+  
+  Train:
+    build: processus/
+    container_name: processus
+    command: python ./processus.py
+    depends_on : 
+      - definition
+    
+
+  Test:
+    build: show/
+    container_name: show
+    command: python ./show.py
+    depends_on : 
+      - definition
