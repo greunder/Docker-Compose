@@ -1,0 +1,6 @@
+FROM python:latest
+
+ADD process.py/process/
+
+WORKDIR /process/
+
