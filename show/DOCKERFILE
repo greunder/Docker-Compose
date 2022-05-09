@@ -1,0 +1,7 @@
+FROM python:latest
+
+ADD show.py/show/
+
+WORKDIR /show/
+
+
